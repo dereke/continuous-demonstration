@@ -2,13 +2,13 @@ var plastiq = require('plastiq');
 var router = require('plastiq-router');
 var h = plastiq.html;
 
+var routes = {
+  all: router.route('/'),
+  filter: router.route('/:filter')
+};
+
 module.exports = function createApp(todos) {
   router.start({history: router.hash});
-
-  var routes = {
-    all: router.route('/'),
-    filter: router.route('/:filter')
-  };
 
   return {
     todos: todos || [],

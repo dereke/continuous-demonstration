@@ -6,29 +6,27 @@ var demo = require('demonstrator');
 
 var todo = browser.component({
   newTodo: function(){
-    return this.find('.new-todo');
-  },
-  count: function(){
-    return this.find('.todo-count');
-  },
-  item: function(name){
+     return this.find('.new-todo');
+   },
+count: function(){
+     return this.find('.todo-count');
+   },
+item: function(name){
     return this.find('.todo-list li').containing('label', {text: name});
   }
-})
+});
+
+demo.record(todo, '#test');
 
 describe('items', function(){
   beforeEach(function(){
-    this.recorder = demo.record(todo, '#test');
+    window.history.replaceState(null, '', '/');
   });
-  afterEach(function(){
-    this.recorder.send().then(function(){
-      console.log('demo sent to server');
-    });
-  });
-  it.only('add item', function(){
+  it('add item', function(){
     mountApp(function(testEl, data){
       plastiq.append(testEl, createApp(), {requestRender: setTimeout});
     });
+
 
     return todo.newTodo().typeIn('apples').then(function(){
       return todo.newTodo().submit();

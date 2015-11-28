@@ -4,14 +4,14 @@
   "description": "Example app to show continuous demonstration in action",
   "main": "index.js",
   "scripts": {
-    "test": "karma start --single-run"
+    "test": "DEMONSTRATOR_API_KEY=test DEMONSTRATOR_USER=dereke DEMONSTRATOR_APP=1demo karma start"
   },
   "author": "Derek Ekins",
   "license": "MIT",
   "devDependencies": {
     "browser-monkey": "^1.26.3",
     "chai": "^3.4.1",
-    "demonstrator": "^0.1.0",
+    "demonstrator": "^0.1.1",
     "karma": "^0.13.15",
     "karma-browserify": "^4.4.0",
     "karma-chrome-launcher": "^0.2.1",

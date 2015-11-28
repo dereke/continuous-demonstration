@@ -10,11 +10,6 @@ This is currently highly experimental.
 However you can run it by cloning this repo.
 
 * `npm install`
-* running `DEMONSTRATOR_API_KEY=test DEMONSTRATOR_USER=dereke DEMONRATOR_APP=demo karma start`
+* running `DEMONSTRATOR_API_KEY=test DEMONSTRATOR_USER=dereke DEMONSTRATOR_APP=demo karma start`
 * visit the [results page](https://continuous-demo.herokuapp.com/api/dereke/demo/recent)
-
-# Known issues
-
-* You need to switch to the debug tab in karma for xhr requests to be processed
-* Only one test in the suite will run at a time (so one is marked as only)
-* The continuous demonstration server currentl only displays raw data
+ - The continuous demonstration server currentl only displays raw data

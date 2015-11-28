@@ -4,7 +4,7 @@
   "description": "Example app to show continuous demonstration in action",
   "main": "index.js",
   "scripts": {
-    "test": "DEMONSTRATOR_API_KEY=test DEMONSTRATOR_USER=dereke DEMONSTRATOR_APP=1demo karma start"
+    "test": "DEMONSTRATOR_API_KEY=test DEMONSTRATOR_USER=dereke DEMONSTRATOR_APP=demo karma start"
   },
   "author": "Derek Ekins",
   "license": "MIT",
